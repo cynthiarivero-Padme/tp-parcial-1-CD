@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la web se adapte bien a celular, tablet y pc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña -->
+    <title>BONSAI</title>
+
+    <!-- Google Fonts: DM Serif Display + Source Sans 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vincula el archivo CSS principal -->
+    <link rel="stylesheet" href="estilo/style.css">
+
+    <!-- Favicon en formato webp -->
+    <link rel="icon" href="img/favicon.webp" type="image/webp">
+</head>
+
+<body>
+
+    <!-- =======================================================
+         HEADER
+         BONSAI queda como h1.
+         El menú se abre con la lógica de tu profe:
+         el target cae en #menu y desde ahí se despliega #barra
+    ======================================================== -->
+    <header>
+        <h1 id="logo">
+            <img src="img/logo-bonsai.webp" alt="BONSAI">
+        </h1>
+
+        <nav id="menu">
+            <ul id="hamburguesa">
+                <li>
+                    <a href="#menu">
+                        <img src="img/menu.webp" alt="Abrir menú">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">×</a>
+                </li>
+            </ul>
+
+            <ul id="barra">
+                <li><a href="#promo">Inicio</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#historia">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =======================================================
+             PROMO / BANNER PRINCIPAL
+        ======================================================== -->
+        <section id="promo">
+            <figure class="promo-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/promo-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/promo-tablet.webp">
+                    <img src="img/promo-pc.webp" alt="Plantas decorando un espacio interior">
+                </picture>
+            </figure>
+
+            <div class="promo-contenido">
+                <h2>Creá un futuro más verde</h2>
+
+                <p>
+                    Aportá frescura y bienestar a tu hogar con nuestras plantas seleccionadas de fácil cuidado.
+                </p>
+
+                <div class="botones">
+                    <a href="#popup1">Descubrir plantas</a>
+                    <a href="#historia">Conocer más</a>
+                </div>
+
+                <ul>
+                    <li>Ideal</li>
+                    <li>55 a 70% humedad</li>
+                    <li>Fácil de cuidar</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- =======================================================
+             BENEFICIOS
+        ======================================================== -->
+        <section id="beneficios">
+            <h2>Las más populares de BONSAI</h2>
+
+            <ul>
+                <li>
+                    <figure class="beneficio-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/beneficio1-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/beneficio1-tablet.webp">
+                            <img src="img/beneficio1-pc.webp" alt="Plantas para interiores">
+                        </picture>
+                    </figure>
+
+                    <h3>Plantas para interiores</h3>
+                    <p>Opciones super ideales para sumar frescura, equilibrio y vida a cualquier ambiente de tu hogar.</p>
+                    <a href="#popup2">Conocer más</a>
+                </li>
+
+                <li>
+                    <figure class="beneficio-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/beneficio2-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/beneficio2-tablet.webp">
+                            <img src="img/beneficio2-pc.webp" alt="Macetas sustentables">
+                        </picture>
+                    </figure>
+
+                    <h3>Macetas sustentables</h3>
+                    <p>Diseños simples y funcionales que acompañan la estética natural de cada espacio.</p>
+                    <a href="#popup3">Conocer más</a>
+                </li>
+
+                <li>
+                    <figure class="beneficio-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/beneficio3-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/beneficio3-tablet.webp">
+                            <img src="img/beneficio3-pc.webp" alt="Asesoramiento experto">
+                        </picture>
+                    </figure>
+
+                    <h3>Asesoramiento experto</h3>
+                    <p>Consejos prácticos para ayudarte a elegir, ubicar y cuidar mejor tus plantas.</p>
+                    <a href="#popup4">Conocer más</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- =======================================================
+             CONDICIONES
+        ======================================================== -->
+        <section id="condiciones">
+            <h2>Condiciones ideales</h2>
+
+            <ul>
+                <li>
+                    <img src="img/exterior.webp" alt="Plantas de exterior">
+                </li>
+
+                <li>
+                    <img src="img/interior.webp" alt="Plantas de interior">
+                </li>
+
+                <li>
+                    <img src="img/temperatura.webp" alt="Temperatura ideal">
+                </li>
+
+                <li>
+                    <img src="img/humedad.webp" alt="Nivel de humedad">
+                </li>
+            </ul>
+        </section>
+
+        <!-- =======================================================
+             PRODUCTOS
+        ======================================================== -->
+        <section id="productos">
+            <h2>Productos destacados</h2>
+
+            <ul>
+                <li>
+                    <div class="foto-con-sticker">
+                        <figure class="producto-img">
+                            <picture>
+                                <source media="(max-width: 556px)" srcset="img/planta1-celu.webp">
+                                <source media="(max-width: 991px)" srcset="img/planta1-tablet.webp">
+                                <img src="img/planta1-pc.webp" alt="Planta de interior Cinta Libre">
+                            </picture>
+                        </figure>
+
+                        <img src="img/sticker-promo.webp" alt="En promo" class="sticker-promo">
+                    </div>
+
+                    <h3>Cinta Libre</h3>
+                    <p>Ideal para escritorios y espacios pequeños.</p>
+                    <a href="#">Conocer más</a>
+                </li>
+
+                <li>
+                    <div class="foto-con-sticker">
+                        <figure class="producto-img">
+                            <picture>
+                                <source media="(max-width: 556px)" srcset="img/planta2-celu.webp">
+                                <source media="(max-width: 991px)" srcset="img/planta2-tablet.webp">
+                                <img src="img/planta2-pc.webp" alt="Planta Bonsái Natura">
+                            </picture>
+                        </figure>
+
+                        <img src="img/sticker-promo.webp" alt="En promo" class="sticker-promo">
+                    </div>
+
+                    <h3>Bonsái Natura</h3>
+                    <p>Una opción fresca para interiores luminosos.</p>
+                    <a href="#">Conocer más</a>
+                </li>
+
+                <li>
+                    <div class="foto-con-sticker">
+                        <figure class="producto-img">
+                            <picture>
+                                <source media="(max-width: 556px)" srcset="img/planta3-celu.webp">
+                                <source media="(max-width: 991px)" srcset="img/planta3-tablet.webp">
+                                <img src="img/planta3-pc.webp" alt="Planta Bonsái Vida">
+                            </picture>
+                        </figure>
+
+                        <img src="img/sticker-promo.webp" alt="En promo" class="sticker-promo">
+                    </div>
+
+                    <h3>Bonsái Vida</h3>
+                    <p>Aporta bienestar a cualquier ambiente.</p>
+                    <a href="#">Conocer más</a>
+                </li>
+
+                <li>
+                    <div class="foto-con-sticker">
+                        <figure class="producto-img">
+                            <picture>
+                                <source media="(max-width: 556px)" srcset="img/planta4-celu.webp">
+                                <source media="(max-width: 991px)" srcset="img/planta4-tablet.webp">
+                                <img src="img/planta4-pc.webp" alt="Planta Cretona Verde">
+                            </picture>
+                        </figure>
+
+                        <img src="img/sticker-promo.webp" alt="En promo" class="sticker-promo">
+                    </div>
+
+                    <h3>Cretona Verde</h3>
+                    <p>Ideal para escritorios y espacios pequeños.</p>
+                    <a href="#">Conocer más</a>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- =======================================================
+             CARRUSEL
+        ======================================================== -->
+        <section id="carrusel">
+            <h2>Espacios BONSAI</h2>
+
+            <ul>
+                <li>
+                    <figure class="carrusel-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/carrusel1-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/carrusel1-tablet.webp">
+                            <img src="img/carrusel1-pc.webp" alt="Living con plantas de interior">
+                        </picture>
+                    </figure>
+
+                    <h3>Living natural</h3>
+                    <p>Una composición pensada para sumar frescura y armonía al espacio principal del hogar.</p>
+                </li>
+
+                <li>
+                    <figure class="carrusel-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/carrusel2-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/carrusel2-tablet.webp">
+                            <img src="img/carrusel2-pc.webp" alt="Escritorio con plantas pequeñas">
+                        </picture>
+                    </figure>
+
+                    <h3>Rincón de trabajo</h3>
+                    <p>Plantas pequeñas y funcionales para acompañar escritorios, estudios y mesas de apoyo.</p>
+                </li>
+
+                <li>
+                    <figure class="carrusel-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/carrusel3-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/carrusel3-tablet.webp">
+                            <img src="img/carrusel3-pc.webp" alt="Dormitorio con plantas decorativas">
+                        </picture>
+                    </figure>
+
+                    <h3>Dormitorio verde</h3>
+                    <p>Una propuesta suave para generar calma, bienestar visual y una atmósfera más relajada.</p>
+                </li>
+
+                <li>
+                    <figure class="carrusel-img">
+                        <picture>
+                            <source media="(max-width: 556px)" srcset="img/carrusel4-celu.webp">
+                            <source media="(max-width: 991px)" srcset="img/carrusel4-tablet.webp">
+                            <img src="img/carrusel4-pc.webp" alt="Espacio interior con varias macetas">
+                        </picture>
+                    </figure>
+
+                    <h3>Composición botánica</h3>
+                    <p>Una forma de combinar macetas, alturas y follajes para crear un rincón con identidad propia.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- =======================================================
+             HISTORIA
+        ======================================================== -->
+        <section id="historia">
+            <figure class="historia-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/historia-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/historia-tablet.webp">
+                    <img src="img/historia-pc.webp" alt="Espacio interior con plantas">
+                </picture>
+            </figure>
+
+            <h2>Nuestra historia</h2>
+
+            <p>
+                BONSAI nace de la idea de acercar la naturaleza a la vida cotidiana de una forma simple, armónica y accesible. Creemos que una planta no es solo un objeto decorativo, sino una presencia viva que transforma los espacios, mejora el ánimo y genera una conexión más auténtica con el entorno. Por eso seleccionamos especies pensadas para adaptarse a interiores, acompañadas por macetas y propuestas visuales que combinan diseño, calma y bienestar. Nuestro objetivo es que cada persona pueda crear un rincón verde propio, sin necesidad de ser experta, incorporando frescura, equilibrio y belleza natural a su casa, estudio o lugar de trabajo.
+            </p>
+
+            <a href="#">Leer más</a>
+        </section>
+            </main>
+
+    <!-- =======================================================
+         FOOTER
+    ======================================================== -->
+    <footer id="contacto">
+        <h2>BONSAI</h2>
+
+        <p>Plantas, diseño y bienestar para tus espacios.</p>
+
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#historia">Nosotros</a></li>
+                <li><a href="#condiciones">Cuidados</a></li>
+            </ul>
+        </nav>
+
+        <ul class="footer-redes">
+            <li>
+                <a href="#">
+                    <img src="img/instagram.webp" alt="Instagram">
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img/facebook.webp" alt="Facebook">
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img/whatsapp.webp" alt="WhatsApp">
+                </a>
+            </li>
+        </ul>
+
+        <p class="footer-copy">© 2026 BONSAI — Trabajo práctico Composición Digital</p>
+
+        <div class="footer-deco">
+            <img src="img/hojas4.webp" alt="Decoración de hojas">
+        </div>
+    </footer>
+
+    <!-- =======================================================
+         POPUPS
+    ======================================================== -->
+    <div id="popup1" class="popup">
+        <div class="contenido-popup">
+            <a href="#" class="cerrar">×</a>
+
+            <figure class="popup-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/popup1-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/popup1-tablet.webp">
+                    <img src="img/popup1-pc.webp" alt="Descubrir plantas">
+                </picture>
+            </figure>
+
+            <h3>Descubrir plantas</h3>
+            <p>
+                En BONSAI seleccionamos plantas pensadas para transformar los espacios con frescura, equilibrio y belleza natural. Cada variedad fue elegida para adaptarse mejor a interiores y acompañar la vida cotidiana de forma simple.
+            </p>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="contenido-popup">
+            <a href="#" class="cerrar">×</a>
+
+            <figure class="popup-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/popup2-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/popup2-tablet.webp">
+                    <img src="img/popup2-pc.webp" alt="Plantas para interiores">
+                </picture>
+            </figure>
+
+            <h3>Plantas para interiores</h3>
+            <p>
+                Nuestras plantas de interior están pensadas para aportar armonía y vida a livings, dormitorios, escritorios y rincones especiales. Son una forma simple de sumar naturaleza sin perder estética.
+            </p>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <div class="contenido-popup">
+            <a href="#" class="cerrar">×</a>
+
+            <figure class="popup-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/popup3-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/popup3-tablet.webp">
+                    <img src="img/popup3-pc.webp" alt="Macetas sustentables">
+                </picture>
+            </figure>
+
+            <h3>Macetas sustentables</h3>
+            <p>
+                Trabajamos con macetas que combinan funcionalidad, diseño y materiales que acompañan la idea de un hogar más natural. Buscamos piezas que realcen cada planta y se integren al espacio.
+            </p>
+        </div>
+    </div>
+
+    <div id="popup4" class="popup">
+        <div class="contenido-popup">
+            <a href="#" class="cerrar">×</a>
+
+            <figure class="popup-img">
+                <picture>
+                    <source media="(max-width: 556px)" srcset="img/popup4-celu.webp">
+                    <source media="(max-width: 991px)" srcset="img/popup4-tablet.webp">
+                    <img src="img/popup4-pc.webp" alt="Asesoramiento experto">
+                </picture>
+            </figure>
+
+            <h3>Asesoramiento experto</h3>
+            <p>
+                En BONSAI te acompañamos para elegir mejor según la luz, el ambiente y el tipo de cuidado que querés dar. La idea es que sumar verde a tu casa sea una experiencia simple, clara y disfrutable.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
