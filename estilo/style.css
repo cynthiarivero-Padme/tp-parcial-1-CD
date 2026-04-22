@@ -1,20 +1,20 @@
 /* =======================================================
-   RESET GENERAL
-   Las tipografías se cargan desde el <link> del HTML.
+   TIPOGRAFÍAS
 ======================================================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
+/* =======================================================
+   RESET GENERAL
+======================================================= */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
 }
-
 
 /* =======================================================
    ESTILOS GENERALES DEL SITIO
 ======================================================= */
-
 body{
     background-color: #f5f3ee;
     color: #1f2a1f;
@@ -38,11 +38,9 @@ a{
     font-weight: 600;
 }
 
-
 /* =======================================================
    JERARQUÍAS TIPOGRÁFICAS
 ======================================================= */
-
 h1{
     font-family: "DM Serif Display", serif;
     font-size: 2rem;
@@ -72,25 +70,43 @@ p{
     margin-top: 0;
 }
 
-
 /* =======================================================
    HEADER / MENÚ
-   Logo trabajado desde CSS
+   MOBILE FIRST = base celular
 ======================================================= */
-
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 80;
     background-color: #ffffff;
 }
 
 header h1{
     margin: 0;
-    line-height: 0;
+    color: transparent;
+    overflow: hidden;
+    text-indent: -9999px;
+    white-space: nowrap;
+    background-image: url("../img/logo-bonsai.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 42px;
 }
 
-header h1 img{
-    display: block;
-    width: 150px;
-    height: auto;
+header nav{
+    width: auto;
+    position: static;
 }
 
 #hamburguesa,
@@ -100,245 +116,210 @@ header h1 img{
     padding: 0;
 }
 
+#hamburguesa{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: 2.8rem;
+    height: 2.8rem;
+    z-index: 90;
+}
 
-/* =======================================================
-   PHONE
-======================================================= */
+#hamburguesa li{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
 
-@media screen and (max-width: 556px){
+#hamburguesa li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
 
-    header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5.5rem;
-        padding: 0 1.5rem;
-        position: relative;
-        z-index: 80;
-        background-color: #ffffff;
-    }
+#hamburguesa li:first-child a img{
+    width: 2.5rem;
+    height: auto;
+    display: block;
+}
 
-    header h1 img{
-        width: 150px;
-        height: auto;
-    }
+#hamburguesa li:last-child{
+    display: none;
+}
 
-    header nav{
-        width: auto;
-        position: static;
-    }
+#hamburguesa li:last-child a{
+    color: #1f2a1f;
+    font-size: 2rem;
+    line-height: 1;
+    background-color: transparent;
+}
 
-    #hamburguesa{
-        position: absolute;
-        top: 50%;
-        right: 1.5rem;
-        transform: translateY(-50%);
-        width: 2.8rem;
-        height: 2.8rem;
-        z-index: 90;
-    }
+#barra{
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    background-color: #ffffff;
+    padding: 0.3rem 0 1rem 0;
+    z-index: 85;
+    overflow: visible;
+}
 
-    #hamburguesa li{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-    }
+#barra li{
+    width: 100%;
+}
 
-    #hamburguesa li a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-    }
+#barra li a{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2a1f;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.35rem 1rem;
+    text-transform: none;
+}
 
-    #hamburguesa li:first-child a img{
-        width: 2.5rem;
-        height: auto;
-        display: block;
-    }
+#menu:target #hamburguesa li:first-child{
+    display: none;
+}
 
-    #hamburguesa li:last-child{
-        display: none;
-    }
+#menu:target #hamburguesa li:last-child{
+    display: block;
+}
 
-    #hamburguesa li:last-child a{
-        color: #1f2a1f;
-        font-size: 2rem;
-        line-height: 1;
-        background-color: transparent;
-    }
-
-    #barra{
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        position: absolute;
-        top: 85%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        min-height: auto;
-        background-color: #ffffff;
-        padding: 0.3rem 0 1rem 0;
-        z-index: 85;
-        overflow: visible;
-    }
-
-    #barra li{
-        width: 100%;
-    }
-
-    #barra li a{
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #1f2a1f;
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1.35rem 1rem;
-        text-transform: none;
-    }
-
-    /* Estado abierto: cuando :target cae en #menu */
-    #menu:target #hamburguesa li:first-child{
-        display: none;
-    }
-
-    #menu:target #hamburguesa li:last-child{
-        display: block;
-    }
-
-    #menu:target #barra{
-        display: flex;
-    }
+#menu:target #barra{
+    display: flex;
 }
 
 /* =======================================================
-   SECCIÓN PROMO / BANNER
-   Acá usamos figure + picture para cambiar la imagen
-   según phone, tablet y desktop.
+   SECCIÓN PROMO
 ======================================================= */
+#promo{
+    position: relative;
+    min-height: 38rem;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+}
 
-    #promo{
-        position: relative;
-        min-height: 38rem;
-        overflow: hidden;
-        color: white;
-        padding: 0;
-        display: flex;
-        align-items: stretch;
-    }
+.promo-img{
+    margin: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
 
-    .promo-img{
-        margin: 0;
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-    }
+.promo-img picture{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
-    .promo-img picture{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+.promo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-    .promo-img img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+#promo::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.42);
+    z-index: 1;
+}
 
-    #promo::after{
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.42);
-        z-index: 1;
-    }
+.promo-contenido{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem 1.5rem 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-    .promo-contenido{
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        padding: 2rem 1.5rem 4rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+#promo h2{
+    font-family: "DM Serif Display", serif;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.3rem;
+    width: 75%;
+}
 
-    #promo h2{
-        font-family: "DM Serif Display", serif;
-        font-size: 2.2rem;
-        line-height: 2.4rem;
-        margin-bottom: 0.3rem;
-        width: 75%;
-    }
+#promo p{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 85%;
+    margin-top: 0;
+}
 
-    #promo p{
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        width: 85%;
-        margin-top: 0;
-    }
+#promo .botones{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+}
 
-    #promo .botones{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-        margin-top: 0.3rem;
-    }
+#promo .botones a{
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.9rem 1.4rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    width: 14rem;
+}
 
-    #promo .botones a{
-        font-family: "Source Sans 3", sans-serif;
-        font-weight: 600;
-        text-align: center;
-        padding: 0.9rem 1.4rem;
-        border-radius: 0.7rem;
-        font-size: 1rem;
-        width: 14rem;
-    }
+#promo .botones a:first-child{
+    background-color: #6c944f;
+    color: white;
+}
 
-    #promo .botones a:first-child{
-        background-color: #6c944f;
-        color: white;
-    }
+#promo .botones a:last-child{
+    color: white;
+    background-color: rgba(108, 148, 79, 0.5);
+}
 
-    #promo .botones a:last-child{
-        color: white;
-        background-color: rgba(108, 148, 79, 0.5);
-    }
+#promo ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+    align-items: flex-start;
+}
 
-    #promo ul{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        margin-top: 0.3rem;
-        align-items: flex-start;
-    }
-
-    #promo ul li{
-        font-family: "Source Sans 3", sans-serif;
-        font-weight: 600;
-        background-color: rgba(77, 104, 68, 0.768);
-        padding: 0.8rem 1rem;
-        border-radius: 1rem;
-        font-size: 0.95rem;
-        width: 11rem;
-    }
-
+#promo ul li{
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    background-color: rgba(77, 104, 68, 0.768);
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.95rem;
+    width: 11rem;
+}
 
 /* =======================================================
    BENEFICIOS
 ======================================================= */
-
 #beneficios{
     background-color: #f5f3ee;
     display: flex;
@@ -371,8 +352,18 @@ header h1 img{
     gap: 0.7rem;
 }
 
-#beneficios ul li .beneficio-img img{
+.beneficio-img{
+    margin: 0;
+}
+
+.beneficio-img picture{
+    display: block;
+}
+
+.beneficio-img img{
     width: 100%;
+    height: auto;
+    display: block;
     border-radius: 0.8rem;
 }
 
@@ -402,25 +393,9 @@ header h1 img{
     margin-top: 0.3rem;
 }
 
-.beneficio-img{
-    margin: 0;
-}
-
-.beneficio-img picture{
-    display: block;
-}
-
-.beneficio-img img{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.8rem;
-}
-
 /* =======================================================
    CONDICIONES
 ======================================================= */
-
 #condiciones{
     background-color: #b7c2b0;
     display: flex;
@@ -457,11 +432,9 @@ header h1 img{
     box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.12);
 }
 
-
 /* =======================================================
    PRODUCTOS
 ======================================================= */
-
 #productos{
     background-color: #edf3e8;
     display: flex;
@@ -485,7 +458,6 @@ header h1 img{
     pointer-events: none;
     z-index: 2;
 }
-
 
 #productos > *{
     position: relative;
@@ -522,28 +494,11 @@ header h1 img{
     border-radius: 0.5rem;
     margin-top: 0.5rem;
     width: fit-content;
-    margin-top: auto;
 }
 
 .foto-con-sticker{
     position: relative;
     width: 100%;
-}
-
-.foto-con-sticker .producto-img img{
-    width: 100%;
-    display: block;
-    border-radius: 0.8rem;
-}
-
-.foto-con-sticker .sticker-promo{
-    position: absolute;
-    top: 1.6rem;
-    right: -0.8rem;
-    width: 10rem;
-    height: auto;
-    z-index: 3;
-    pointer-events: none;
 }
 
 .producto-img{
@@ -561,18 +516,25 @@ header h1 img{
     border-radius: 0.8rem;
 }
 
+.foto-con-sticker .sticker-promo{
+    position: absolute;
+    top: 1.6rem;
+    right: -0.8rem;
+    width: 10rem;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
 /* =======================================================
    CARRUSEL
 ======================================================= */
-
 #carrusel{
     background-color: #c7d1bf;
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem;
-
 }
 
 #carrusel h2{
@@ -586,7 +548,6 @@ header h1 img{
     gap: 1rem;
     overflow-x: auto;
     padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
 }
 
 #carrusel ul li{
@@ -600,7 +561,15 @@ header h1 img{
     flex-direction: column;
 }
 
-#carrusel ul li .carrusel-img img{
+.carrusel-img{
+    margin: 0;
+}
+
+.carrusel-img picture{
+    display: block;
+}
+
+.carrusel-img img{
     width: 100%;
     height: 10.5rem;
     object-fit: cover;
@@ -623,30 +592,11 @@ header h1 img{
     color: white;
 }
 
-.carrusel-img{
-    margin: 0;
-}
-
-.carrusel-img picture{
-    display: block;
-}
-
-.carrusel-img img{
-    width: 100%;
-    height: 10.5rem;
-    object-fit: cover;
-    display: block;
-}
-
 /* =======================================================
    HISTORIA
-   Acá usamos figure + picture para cargar una imagen distinta
-   según el tamaño de pantalla.
 ======================================================= */
-
 #historia{
     background-color: #f5f3ee;
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -688,25 +638,9 @@ header h1 img{
     margin-top: 0.3rem;
 }
 
-#historia::before{
-    content: "";
-    position: absolute;
-    top: -3.7rem;
-    left: 0;
-    width: 100%;
-    height: 6rem;
-    background-image: url("../img/hojasverdes.webp");
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    background-size: auto 6rem;
-    pointer-events: none;
-    z-index: 180;
-}
-
 /* =======================================================
    FOOTER
 ======================================================= */
-
 footer{
     background-image:
         url("../img/tierra.webp"),
@@ -799,11 +733,9 @@ footer p{
     opacity: 0.9;
 }
 
-
 /* =======================================================
-   POP UPS
+   POPUPS
 ======================================================= */
-
 .popup{
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
@@ -836,11 +768,19 @@ footer p{
     gap: 0.8rem;
 }
 
-.contenido-popup .popup-img img{
+.popup-img{
+    margin: 0;
+}
+
+.popup-img picture{
+    display: block;
+}
+
+.popup-img img{
     width: 100%;
     height: auto;
-    border-radius: 0.9rem;
     display: block;
+    border-radius: 0.9rem;
 }
 
 .contenido-popup h3{
@@ -880,25 +820,9 @@ footer p{
     background-color: #476938;
 }
 
-.popup-img{
-    margin: 0;
-}
-
-.popup-img picture{
-    display: block;
-}
-
-.popup-img img{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.9rem;
-}
-
 /* =======================================================
-   TABLET (mobile-first: solo min-width, como vimos en clase)
+   TABLET
 ======================================================= */
-
 @media screen and (min-width: 557px){
 
     header{
@@ -912,12 +836,12 @@ footer p{
     }
 
     header h1{
-        flex-shrink: 0;
-    }
-
-    header h1 img{
         width: 170px;
-        height: auto;
+        height: 46px;
+        position: static;
+        transform: none;
+        display: block;
+        flex-shrink: 0;
     }
 
     header nav{
@@ -946,6 +870,8 @@ footer p{
         border-radius: 0;
         box-shadow: none;
         overflow: visible;
+        position: static;
+        width: auto;
     }
 
     #barra li{
@@ -966,7 +892,6 @@ footer p{
         text-align: left;
         text-transform: none;
     }
-
 
     #promo{
         min-height: 34rem;
@@ -1021,7 +946,7 @@ footer p{
     }
 
     #beneficios ul li:last-child{
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
     }
 
     #condiciones{
@@ -1047,6 +972,9 @@ footer p{
         gap: 1.2rem;
     }
 
+    #productos ul li:last-child{
+        grid-column: 1 / 3;
+    }
 
     #productos .sticker-promo{
         width: 9rem;
@@ -1069,7 +997,6 @@ footer p{
         height: 11rem;
     }
 
-    /* HISTORIA */
     #historia{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1189,81 +1116,24 @@ footer p{
     }
 }
 
-
-
-
 /* =======================================================
    DESKTOP
 ======================================================= */
-
 @media screen and (min-width: 992px){
 
     header{
-        background-color: #ffffff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         min-height: 5.6rem;
         padding: 0 4rem;
-        position: relative;
     }
 
     header h1{
-        flex-shrink: 0;
-    }
-
-    header h1 img{
         width: 190px;
-        height: auto;
-    }
-
-    header nav{
-        width: auto;
-        position: static;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding-top: 0.25rem;
-    }
-
-    #hamburguesa{
-        display: none;
+        height: 52px;
     }
 
     #barra{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         gap: 2rem;
-        margin: 0;
-        padding: 0;
-        min-height: auto;
-        min-width: auto;
-        background-color: transparent;
-        border-radius: 0;
-        box-shadow: none;
-        overflow: visible;
     }
-
-    #barra li{
-        width: auto;
-        display: flex;
-        align-items: center;
-    }
-
-    #barra li a{
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #1f2a1f;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        line-height: 1;
-        text-align: left;
-        text-transform: none;
-    }
-
 
     #promo{
         min-height: 42rem;
@@ -1365,11 +1235,15 @@ footer p{
     }
 
     #productos ul li{
-        grid-column: span 3;
+        grid-column: span 4;
     }
 
     #productos ul li:last-child{
-        grid-column: span 3;
+        grid-column: span 4;
+    }
+
+    #productos .sticker-promo{
+        width: 10rem;
     }
 
     #carrusel{
@@ -1394,7 +1268,7 @@ footer p{
     }
 
     #carrusel ul li .carrusel-img img{
-    height: 12rem;
+        height: 12rem;
     }
 
     #historia{
@@ -1438,7 +1312,7 @@ footer p{
         position: absolute;
         top: -1rem;
         right: 0.4rem;
-        width: 6rem;
+        width: 8rem;
         height: auto;
         z-index: 3;
         pointer-events: none;
@@ -1519,7 +1393,10 @@ footer p{
     }
 
     .contenido-popup .popup-img img{
-    max-height: 18rem;
-    object-fit: cover;
+        max-height: 18rem;
+        object-fit: cover;
     }
 }
+
+  
+
